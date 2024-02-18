@@ -1,2 +1,2 @@
 # Testcode
-个人项目代码
+python框架Django及其Scrapy和Python编程基础
