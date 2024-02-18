@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>分页功能</h2>
+<hr>
+<ul>
+
+  {%  for p in page_range %}
+       <a href="/App/paginate/{{p}}/"><button>{{p}}</button></a>
+     {% endfor %}
+</ul>
+<hr>
+<table border="1" width="300">
+  {%  for p in persons %}
+        <tr>
+           <td>姓名:{{p.name}}</td>
+            <td>年龄:{{p.age}}</td>
+        </tr>
+
+     {% endfor %}
+
+</table>
+</body>
+</html>

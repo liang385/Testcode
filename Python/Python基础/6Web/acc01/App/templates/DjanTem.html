@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<div>
+    <h1>DjangoTemplate语言</h1>
+    <hr>
+</div>
+<div>
+<!--1:模板语法变量-->
+    <p>name:{{name}}</p>
+    <p>age:{{age}}</p>
+<!-- 列表使用index不能使用负index   -->
+    <p>province.2:{{province.2}}</p>
+    <p>stars:{{stars}}</p>
+</div>
+<!--for循环template语言不需要使用{}-->
+<!--模板语言也要注意缩进-->
+<div>
+<hr>
+<table border="1" width="300">
+
+     {%  for star in stars  %}
+        <tr>
+          {%  for x in star %}
+           <td>{{x}}</td>
+          {% endfor %}
+        </tr>
+     {% endfor %}
+</table>
+<!--if语句-->
+{%  if age > 5 and age <= 18 %}
+  <p>{{name}}:成年了</p>
+{% elif age <= 60 %}
+ <p>{{name}}:青年</p>
+{%  else %}
+<p>{{name}}:老年</p>
+    {% endif %}
+
+</div>
+
+<div>
+<!--过滤-->
+    add{{ age|add:2 }}
+    <p>{{age}}</p>
+
+</div>
+<body>
+
+</body>
+</html>

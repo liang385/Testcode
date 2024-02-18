@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript编程基础</title>
+</head>
+<body>
+<div>
+    <h1>JavaScript编程基础</h1><hr>
+</div>
+</body>
+<script type="text/javascript" charset="UTF-8">
+//alert游览器框弹出函数
+// 可以通过script的scr属性引入 js文件
+    alert('hello script')
+    //变量：js中变量时松散类型可以存储任何类型的数据
+    var a='liang'
+    // 控制台输出
+    console.log(a)
+    // 数据类型 undefined,boolean,string,number,object:对象或null
+    for( var box=1;box<=5;box++){
+    //document.write在body中打印
+    document.write("box的值："+box+"<br>");
+
+    }
+
+    //函数使用function声明
+    function box(name,age){
+        document.write('姓名 ：'+name+'年龄'+age);
+    }
+    //调用函数
+    box('liang',20);
+
+
+</script>
+</html>

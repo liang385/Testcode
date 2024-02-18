@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--类型声明-->
+<html lang="en">
+<head>
+    <!--<head>定义文档的头部，里面有meta,title,link,script,style-->
+    <meta charset="UTF-8">
+    <!--meta定义标签的元数据-->
+    <title>文档的标题，网站名称</title>
+    <style>
+        /*body设置背景图片为image下的register.jpg,不重复，居中*/
+        div{
+            background: url("image/data.jpg")
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>广西城市职业大学信息管理系统</h1><hr>
+        <a  href="http://www.gxcvuedu.com/" target="_blank">gxcvuedu官网</a>
+        <!--引入图片-->
+        <img scr="image/data.jpg">
+        <table border="1" align="center" width="500">
+            <tr>
+                <td>Id</td>
+                <td>性别</td>
+                <td>姓名</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>男</td>
+                <td>张三丰</td>
+            </tr>
+
+
+
+
+        </table>
+
+        <form action="#">
+            <div class="form_div">
+                <table>
+                    <tr>
+                        <td class="td_left">用户名</td>
+                        <td class="td_right">
+                            <input type="text" name="username" id="username" placeholder="请输入用户名">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_left">密码</td>
+                        <td class="td_right">
+                            <input type="password" name="password" id="password" placeholder="请输入密码">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_left">Email</td>
+                        <td class="td_right">
+                            <input type="email" name="emai" id="email" placeholder="请输入邮箱">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_left">手机号</td>
+                        <td class="td_right">
+                            <input type="text" name="tel" id="tel" placeholder="请输入电话号码">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_left">性别</td>
+                        <td class="td_right">
+                            <input type="radio" name="gender" value="1">男
+                            <input type="radio" name="gender" value="2">女
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_left">生日</td>
+                        <td class="td_right">
+                            <input type="date" name="bir" id="bir">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <!-- input标签，是一个普通按钮，id为btn -->
+                            <input type="button" value="注册" id="btn">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+</form>
+    </div>
+</body>
+</html>
+        
+
+       
+        

@@ -1,0 +1,28 @@
+1：scrapy框架的安装
+
+2：下载anaconda配置环境变量
+Anaconda是一个用于管理Python环境的平台。它可以帮助你在计算机上创建、维护和使用不同版本的Python及其各种包。
+
+要使用Anaconda配置Python环境，首先需要安装Anaconda。安装完成后，可以使用以下命令来管理Python环境：
+
+conda create- 创建一个新的Python环境
+conda activate- 激活一个环境
+conda deactivate- 退出当前环境
+conda remove- 删除一个环境
+conda list- 列出所有已安装的环境
+比如:
+conda create --name myenv python=3.6 会新建一个名为myenv的python3.6环境
+Conda activate Myenv 就可以切换到这个环境中了
+
+在环境中还可以通过conda install 安装其他包或者pip install
+conda install numpy 或者 pip install numpy
+
+D:\anaconda
+D:\anaconda\Scripts\
+D:\anaconda\Library\bin
+D:\anaconda\Library\mingw-w64\bin。
+
+3：下载scrapy
+conda install srcapy
+
+4:创建scrapy项目

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: #F2F2F2;
+		}
+
+		.container {
+			padding: 16px;
+			background-color: white;
+			border-radius: 5px;
+			box-shadow: 0 0 10px #888888;
+			max-width: 400px;
+			margin: auto;
+			margin-top: 100px;
+		}
+
+		input[type=text], input[type=password] {
+			padding: 10px;
+			margin: 5px 0;
+			display: block;
+			border: none;
+			border-radius: 5px;
+			width: 100%;
+		}
+
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 30px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		input[type=submit]:hover {
+			background-color: #45a049;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h2>Login</h2>
+		<form action="" method="POST">
+			<!--   防止安全校验     -->
+					{% csrf_token %}
+
+					<label for="username">用户名:</label>
+					<input type="text" id="username" name="username"  placeholder="请输入username" required><br><br>
+
+					<label for="password">密码:</label>
+					<input type="password" id="password" name="password" placeholder="请输入passwd " required><br><br>
+
+					<input type="submit" value="登录">
+			</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>所有用户信息</title>
+</head>
+<body>
+<h1>用户List</h1>
+<hr>
+<ul>
+<!--  遍历用户信息-->
+  {%  for user in users %}
+<!--    使用命名空间，反向解析路由传参-->
+<!--    {% url 'App:index02' user.id%}-->
+<!--    App为根目录的命名空间  index02为子目录的url命名-->
+    <a href="{% url 'App:index02' user.id %}">
+        <li>name: {{user.name}} age:{{user.age}}</li>
+    </a>
+     {% endfor %}
+</ul>
+</body>
+</html>

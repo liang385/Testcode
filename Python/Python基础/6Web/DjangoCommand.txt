@@ -1,0 +1,54 @@
+Django框架开发
+
+1:安装框架： pip3 install django
+ 创建项目django-admin.exe startproject learning_log .
+
+2：启动项目 python ./manage.py runserver
+   停止运行：ctrl +c
+
+3：数据迁移
+python ./manage.py makemigrations 生成迁移文件
+python ./manage.py migrate  执行迁移
+
+4：创建应用
+render渲染模板一个html文件作为response,会自动匹配APP应用下的templates目录的html文件
+django-admin.exe startapp App
+
+
+
+
+5:让别人可以访问到我的Django项目
+设置windows防火墙的网络入站规则类型为端口 8080
+允许同一局域网访问ALLOWED_HOSTS = ["*"]
+python ./manage.py runserver 0.0.0.0:8080
+查看 自己的无线局域网的ipv4地址  ipconfig
+
+
+6:views和根urls和子urls
+使用子路由url,一个应用对应一个子url
+在根url使用子路由url 访问路径  App/index01   App/index02
+path("App/", include("App.urls"))
+
+
+7:models模板
+导入模板 from django.db import models
+用户类需要继承models.Model类
+# Models<==>表结构
+# Class属性<==>表字段
+# 对象<==>表的一行记录
+name = models.CharField(max_length=10)     # Sql :  name varchar(10)
+数据迁移:将模型Model映射到数据库的过程
+# python ./manage.py makemigrations 生成迁移文件
+# python ./manage.py migrate  执行迁移数据库创建表
+def index03(request):
+    # 模型操作获取用户信息
+    Appusers = Appuser.objects.all()
+    return render(request, 'user.html', {"users": Appusers})
+#html文件
+<!--  遍历用户信息-->
+  {%  for user in users %}
+  <li>{{user.id}},{{user.name}},{{user.age}},{{user.sex}},</li>
+  {%  endfor %}
+
+创建superuser
+python ./manage.py createsuperuser-
