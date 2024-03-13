@@ -1,0 +1,20 @@
+hadoop环境配置
+1:虚拟机网络配置设置static,IP(可以ping通虚拟机ip)
+1.1修改主机名称 vim etc/hostname
+1.2设置ssh免密登录   
+ssh-keygen -t ras
+ssh-copy=id hostname
+ssh hostname
+1.3配置软件(xshell,xftp 上传hadoop和java安装包)
+1.4java环境配置
+vim /etc/profile
+JAVA_HOME=/usr/java/jdk1.8.0_201
+CLASSPATH=.:$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar
+PATH=$JAVA_HOME/bin:$HOME/bin:$HOME/.local/bin:$PATH
+1.5配置hadoop环境
+vim /etc/profile
+export HADOOP_HOME=/export/servers/hadoop-3.3.1
+export PATH=$PATH:$HADOOP_HOME/bin
+export PATH=$PATH:$HADOOP_HOME/sbin
+source /etc/profile
+
