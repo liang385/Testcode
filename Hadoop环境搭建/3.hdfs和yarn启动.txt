@@ -23,3 +23,10 @@ ResourceManager
 
 通过游览器访问yarn: http://192.168.126.122:8088
 
+4：想通过windows访问liunx的hadoop内容需要修改windows的hosts文件添加liunx的hostname和ip关闭liunx防火墙
+永久关闭防火墙：
+systemctl disable firewalld 
+chkconfig iptables off
+
+通过游览器访问hdfs: http://192.168.126.122:9870
+
