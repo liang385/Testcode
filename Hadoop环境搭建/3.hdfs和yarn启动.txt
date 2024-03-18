@@ -1,0 +1,25 @@
+1：配置hdfs环境：每个 Hadoop 服务应该在哪个用户下运行。你可以通过在 Hadoop 配置文件中定义这些变量，
+hadoop-env.sh或者在 shell 环境中导出它们来实现，指定在root用户下运行。
+
+export HDFS_NAMENODE_USER=root
+export HDFS_DATANODE_USER=root
+export HDFS_SECONDARYNAMENODE_USER=root
+
+2：启动HDFS：一次启动所有进程 
+
+$HADOOP_HOME/sbin/start-dfs.sh
+使用jps查看进程,有以下进程表示hdfs启动成功
+NameNode
+DataNode
+SecondaryNameNode
+
+通过游览器访问hdfs: http://192.168.126.122:9870
+
+3:启动yarn :$HADOOP_HOME/sbin/start-yarn.sh
+使用jps查看进程,有以下进程表示hdfs启动成功
+jps
+NodeManager
+ResourceManager
+
+通过游览器访问yarn: http://192.168.126.122:8088
+
